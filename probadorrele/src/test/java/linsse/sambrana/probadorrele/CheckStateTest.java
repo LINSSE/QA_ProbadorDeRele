@@ -4,7 +4,7 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-public class TestEntradas {
+public class CheckStateTest {
 
 	private ManejadorEntradas m = new ManejadorEntradas();
 

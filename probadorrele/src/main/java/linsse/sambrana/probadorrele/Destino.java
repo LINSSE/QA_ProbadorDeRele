@@ -1,6 +1,10 @@
 package linsse.sambrana.probadorrele;
 
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 public abstract class Destino implements Runnable{
+	Logger logger;
 	private Buffer contenido = new Buffer();
 	
 	abstract String getTitulo();
@@ -12,17 +16,17 @@ public abstract class Destino implements Runnable{
 	}
 	
 	
-	public void put(UnidadLectura U){
+	public void put(UnidadLectura u){
 		this.log("add to buffer");
-		this.getBuffer().add(U);
+		this.getBuffer().add(u);
 	}	
 		
 	public UnidadLectura get(){
-		UnidadLectura U = this.getBuffer().get();
-		if (U != null) 
+		UnidadLectura u = this.getBuffer().get();
+		if (u != null) 
 		{
 			
-			return U;	
+			return u;	
 		}
 		else {
 			this.log("buffer Vacio");
@@ -34,9 +38,13 @@ public abstract class Destino implements Runnable{
 
 	
 	protected void log(String msg){
-		System.out.println(this.getTitulo()+": "+msg);
+		String mensaje = this.mensaje(msg);
+		logger.log(Level.FINER,mensaje);
 	}
 	
+	private String mensaje(String msg){
+		return this.getTitulo()+": "+msg;
+	}
 
 	
 	

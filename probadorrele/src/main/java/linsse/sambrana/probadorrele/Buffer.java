@@ -1,6 +1,8 @@
 package linsse.sambrana.probadorrele;
 
 import java.util.ArrayList;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  * @author Sambrana Ivan
@@ -9,23 +11,27 @@ import java.util.ArrayList;
 public class Buffer {
 	
 	ArrayList<UnidadLectura> contenido = new ArrayList<UnidadLectura>();
-	
+	Logger logger;
 	
 	public synchronized UnidadLectura get()
 	{
 		while(contenido.isEmpty())
 		{
 			try{
-				System.err.println("buffer Vacio, en espera por datos");
+				
+				logger.log(Level.FINEST, "buffer Vacio, en espera por datos");
 				wait();
 			}
 			catch(InterruptedException e)
 			{
-				System.err.println("Contenedor: Error en get "+e.getMessage());
+				
+				logger.log(Level.FINEST, "Hilo Interrumpido");
+				Thread.currentThread().interrupt();
+
 			}		
 		}
 		
-        notify();
+        notifyAll();
         UnidadLectura val = contenido.get(0);
         contenido.remove(val);
         return val;
@@ -43,9 +49,9 @@ public class Buffer {
 	/**
 	 * @param unidadLectura a agregar al buffer
 	 */
-	public synchronized void add(UnidadLectura U){
-		this.contenido.add(U);
-		notify();
+	public synchronized void add(UnidadLectura u){
+		this.contenido.add(u);
+		notifyAll();
 	}
 	
 	public void show(){

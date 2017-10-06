@@ -1,12 +1,17 @@
 package linsse.sambrana.probadorrele;
 
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 public class Main 
 {
-	private static GestorDestinos Destinos = new GestorDestinos();
+	static Logger logger;
+	private static GestorDestinos destinos = new GestorDestinos();
 	private static ManejadorEntradas manejador = new ManejadorEntradas();
-	private static Ventana ventana = new Ventana();
+	 static Ventana ventana;
     public static void main( String[] args )
     {
+    	ventana = new Ventana();
     	setup();
     	
     	start();
@@ -16,7 +21,7 @@ public class Main
 	private static void start() {
    	 while(Boolean.TRUE)
         {	
-   		 Destinos.send(manejador.Read());// reemplazar con el scan
+   		 destinos.send(manejador.read());// reemplazar con el scan
             
             try
             {
@@ -24,22 +29,22 @@ public class Main
             } 
             catch (InterruptedException e) 
             {
-                System.err.println("Productor  Error en run -> " + e.getMessage());
+                logger.log(Level.SEVERE,"Productor  Error en run -> " + e.getMessage());
+                Thread.currentThread().interrupt();
             }
         }
 		
 	}
 	private static void setup() {
-		// TODO Auto-generated method stub
 		DestinoExcel excel =  new DestinoExcel();
-    	Thread hilo_excel = new Thread(excel);
-    	hilo_excel.start();
+    	Thread hiloExcel = new Thread(excel);
+    	hiloExcel.start();
     	
     	DestinoDrive drive =  new DestinoDrive();
-    	Thread hilo_drive = new Thread(drive);
-    	hilo_drive.start();
+    	Thread hiloDrive = new Thread(drive);
+    	hiloDrive.start();
     	
-    	Destinos.RegistrarDestino(excel);
-    	Destinos.RegistrarDestino(drive);
+    	destinos.registrarDestino(excel);
+    	destinos.registrarDestino(drive);
 	}
 }

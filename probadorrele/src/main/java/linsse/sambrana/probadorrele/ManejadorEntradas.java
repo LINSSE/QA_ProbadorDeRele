@@ -12,7 +12,7 @@ public class ManejadorEntradas {
 	private ArrayList<Double> auxiliar;
 	
 	
-	public UnidadLectura Read()
+	public UnidadLectura read()
 	{
 		if (checkValues(test_csv)) 
 		{
@@ -39,7 +39,7 @@ public class ManejadorEntradas {
 				try {
 					auxiliar.add(Double.valueOf(string));
 				} catch (NumberFormatException e) {
-					//LOGGER.log(Level.SEVERE, e.toString(), e);
+				
 					return false;
 				}
 			}

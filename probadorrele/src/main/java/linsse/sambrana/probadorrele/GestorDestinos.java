@@ -6,14 +6,11 @@ import java.util.List;
 public class GestorDestinos {
 	private static List<Destino> destinos = new ArrayList<Destino>();
 	
-	public GestorDestinos(){
-		
-		
-	}
 	
-	public boolean RegistrarDestino(Destino D)
+	
+	public boolean registrarDestino(Destino d)
 	{
-		destinos.add(D);
+		destinos.add(d);
 		return true;	
 	}
 
@@ -24,11 +21,11 @@ public class GestorDestinos {
 		return destinos;
 	}
 	
-	public boolean send (UnidadLectura U)
+	public boolean send (UnidadLectura u)
 	{
 		for (int i = 0; i < this.getDestinos().size(); i++) 
 		{
-			this.getDestinos().get(i).put(U);
+			this.getDestinos().get(i).put(u);
 		}
 		return false;
 	}

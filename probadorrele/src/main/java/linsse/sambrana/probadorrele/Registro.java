@@ -2,6 +2,7 @@ package linsse.sambrana.probadorrele;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -10,15 +11,14 @@ import java.util.logging.Logger;
  *
  */
 public class Registro {
-	private final static Logger LOGGER = Logger.getLogger(Registro.class.getName());
-	private static ArrayList<Double> contenido;
+	Logger logger = Logger.getLogger(Registro.class.getName());
+	private ArrayList<Double> contenido;
 	
 	private String csv;
 	
 
  public Registro(ArrayList<Double> d) 
  { 
-	
 	 this.setContenido(d);
  }
 
@@ -27,19 +27,19 @@ public class Registro {
 /**
  * @return the contenido
  */
-public ArrayList<Double> getContenido() {
-	return contenido;
+public List<Double> getContenido() {
+	return this.contenido;
 }
 
 /**
  * @param contenido the contenido to set
  */
 public void setContenido(ArrayList<Double> contenido) {
-	Registro.contenido = contenido;
+	this.contenido = contenido;
 }
 
 		public void show() {
-			System.out.println(csv);
+			logger.log(Level.FINE,csv);
 			
 		}
 	 

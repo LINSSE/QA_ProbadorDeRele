@@ -1,19 +1,20 @@
 package linsse.sambrana.probadorrele;
 
-import java.util.logging.Level;
-import java.util.logging.Logger;
+
 
 public class Main 
 {
-	static Logger logger;
+	
 	private static GestorDestinos destinos = new GestorDestinos();
 	private static ManejadorEntradas manejador = new ManejadorEntradas();
-	 static Ventana ventana;
+	static Ventana ventana;
+	 
     public static void main( String[] args )
-    {
-    	ventana = new Ventana();
-    	setup();
+    {	
+    	System.out.println("INICIO DEL PROGRAMA");
+    	ventana = Ventana.getInstance();
     	
+    	setup();    	
     	start();
     	
     	
@@ -29,8 +30,8 @@ public class Main
             } 
             catch (InterruptedException e) 
             {
-                logger.log(Level.SEVERE,"Productor  Error en run -> " + e.getMessage());
-                Thread.currentThread().interrupt();
+                System.err.println("Productor  Error en run -> " + e.getMessage());
+               Thread.currentThread().interrupt();
             }
         }
 		

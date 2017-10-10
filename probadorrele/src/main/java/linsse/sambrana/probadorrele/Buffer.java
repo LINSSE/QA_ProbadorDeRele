@@ -11,7 +11,7 @@ import java.util.logging.Logger;
 public class Buffer {
 	
 	ArrayList<UnidadLectura> contenido = new ArrayList<UnidadLectura>();
-	Logger logger;
+
 	
 	public synchronized UnidadLectura get()
 	{
@@ -19,13 +19,13 @@ public class Buffer {
 		{
 			try{
 				
-				logger.log(Level.FINEST, "buffer Vacio, en espera por datos");
+				System.out.println("buffer Vacio, en espera por datos");
 				wait();
 			}
 			catch(InterruptedException e)
 			{
 				
-				logger.log(Level.FINEST, "Hilo Interrumpido");
+				System.err.println("error: Hilo Interrumpido");
 				Thread.currentThread().interrupt();
 
 			}		
@@ -50,6 +50,7 @@ public class Buffer {
 	 * @param unidadLectura a agregar al buffer
 	 */
 	public synchronized void add(UnidadLectura u){
+		u.show();
 		this.contenido.add(u);
 		notifyAll();
 	}

@@ -11,8 +11,8 @@ public class DestinoExcel extends Destino{
 		 while(Boolean.TRUE)
 	        {	
 			 UnidadLectura u = this.get();
-			 this.log("Registro Obtenido ");
-			 //u.show();
+			 System.out.println("Registro Obtenido ");
+			 u.show();
 	        }
 	}
 

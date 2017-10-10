@@ -10,7 +10,7 @@ import java.util.logging.Logger;
  *
  */
 public class Registro {
-	Logger logger = Logger.getLogger(Registro.class.getName());
+
 	private ArrayList<Double> contenido;
 	
 	private String csv;
@@ -37,8 +37,9 @@ public void setContenido(List<Double> contenido) {
 	this.contenido = (ArrayList<Double>) contenido;
 }
 
-		public void show() {
-			logger.log(Level.FINE,csv);
+		public void show() 
+		{
+			System.out.println(this.getContenido().toString());
 			
 		}
 	 

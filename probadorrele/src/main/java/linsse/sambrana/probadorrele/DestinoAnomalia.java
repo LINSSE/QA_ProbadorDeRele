@@ -11,7 +11,7 @@ public class DestinoAnomalia extends Destino{
 		 while(Boolean.TRUE)
 	        {	
 			 UnidadLectura u = this.get();
-			 this.log("Registro Obtenido ");
+			 System.out.println("Registro Obtenido ");
 			 u.show();
 	        }
 	}

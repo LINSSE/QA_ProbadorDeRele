@@ -16,7 +16,7 @@ public class CheckStateTest {
 	@Test
 	public void test_valido() {
 		
-		Boolean actual = m.checkValues("1,2,3,4,5,6");
+		Boolean actual = m.checkValues("1,2,3,4,5,6,7,8,9,10,11,12");
 		Assert.assertEquals(true,actual);
 		
 	}

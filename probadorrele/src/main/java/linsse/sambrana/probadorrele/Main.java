@@ -26,7 +26,7 @@ public class Main
             
             try
             {
-                Thread.sleep(1500);
+                Thread.sleep(3000);
             } 
             catch (InterruptedException e) 
             {
@@ -41,11 +41,21 @@ public class Main
     	Thread hiloExcel = new Thread(excel);
     	hiloExcel.start();
     	
+    	DestinoAnomalia anom =  new DestinoAnomalia();
+    	Thread hiloAnom = new Thread(anom);
+    	hiloAnom.start();
+    	
+    	DestinoGraficos graficos =  new DestinoGraficos();
+    	Thread hiloGraficos = new Thread(graficos);
+    	hiloGraficos.start();
+    	
     	DestinoDrive drive =  new DestinoDrive();
     	Thread hiloDrive = new Thread(drive);
     	hiloDrive.start();
     	
     	destinos.registrarDestino(excel);
     	destinos.registrarDestino(drive);
+    	destinos.registrarDestino(graficos);
+    	destinos.registrarDestino(anom);
 	}
 }

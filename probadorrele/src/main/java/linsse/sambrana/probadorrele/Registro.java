@@ -20,6 +20,8 @@ public class Registro {
  { 
 	 this.setContenido((ArrayList<Double>) d);
  }
+ 
+
 
 
 

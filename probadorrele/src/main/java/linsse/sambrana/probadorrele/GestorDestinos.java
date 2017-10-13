@@ -25,7 +25,7 @@ public class GestorDestinos {
 	{
 		for (int i = 0; i < this.getDestinos().size(); i++) 
 		{
-			this.getDestinos().get(i).put(u);
+			this.getDestinos().get(i).add(u);
 		}
 		return false;
 	}

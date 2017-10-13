@@ -12,7 +12,7 @@ public class DestinoDB extends Destino{
 	        {	
 			 UnidadLectura u = this.get();
 			 System.out.println("Registro Obtenido ");
-			 u.show();
+//			 u.show();
 	        }
 	}
 

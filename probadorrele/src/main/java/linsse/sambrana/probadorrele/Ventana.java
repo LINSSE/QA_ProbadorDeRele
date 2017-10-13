@@ -23,11 +23,13 @@ import org.jfree.data.xy.XYSeries;
 import org.jfree.data.xy.XYSeriesCollection;
 
 
+@SuppressWarnings("serial")
 public class Ventana extends JFrame {
 	 private static Ventana instancia = null;
-
+	 private static JPanel panelGraficos;
 	   private Ventana() { } //constructor privado
 
+	
 	   public static Ventana getInstance() {
 
 	      if (instancia == null) {
@@ -65,21 +67,15 @@ public class Ventana extends JFrame {
 
 	     	panelSuperior.add(boton1);
 	     	panelSuperior.add(boton2);
-	     	JPanel panelGraficos = new JPanel(new GridLayout(3, 5));
-	     	for(int i = 0; i < 15; i++)
-			{
-	     		JFreeChart chart = ChartFactory.createXYLineChart("-", null, null, null);
-				chart.getXYPlot().getRangeAxis().setRange(0, 300);
-	     		panelGraficos.add(new ChartPanel(chart));
-			}
-	     	
-	     	
+	     	panelGraficos = new JPanel(new GridLayout(3, 5));
 	     	
 	     	instancia.add(panelSuperior,BorderLayout.NORTH);
 	     	instancia.add(panelGraficos,BorderLayout.CENTER);
 	  
 	     		panelInferior.add(new JLabel("Barra de estado"));
 	     		ImageIcon icon = new ImageIcon("src/main/resources/images/checked.png");
+	     		ImageIcon iconError = new ImageIcon("src/main/resources/images/error.png");
+
 	     		
 
 
@@ -87,7 +83,7 @@ public class Ventana extends JFrame {
 	     		
 	     		panelInferior.add(new JLabel("Google Drive", icon, JLabel.CENTER));
 	     		panelInferior.add(new JLabel("Ultima Actualización"));
-	     		panelInferior.add(new JLabel("Servicio GMail", icon, JLabel.CENTER));
+	     		panelInferior.add(new JLabel("Servicio GMail", iconError, JLabel.CENTER));
 	     		panelInferior.add(new JLabel("Ultima Actualización"));
 	     		panelInferior.add(new JLabel("Servicio SMS", icon, JLabel.CENTER));
 	     		panelInferior.add(new JLabel("Ultima Actualización"));
@@ -105,5 +101,8 @@ public class Ventana extends JFrame {
 	      }
 	      return instancia;
 	   }
-
+	   
+	   public JPanel getPanelGraficos(){
+		   return panelGraficos;
+	   }
 }

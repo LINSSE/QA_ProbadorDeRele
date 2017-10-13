@@ -37,6 +37,7 @@ public class Buffer {
         return val;
 		
 	}
+	
 		
 	public Boolean isEmpty(){
 		return this.contenido.isEmpty();	
@@ -50,7 +51,6 @@ public class Buffer {
 	 * @param unidadLectura a agregar al buffer
 	 */
 	public synchronized void add(UnidadLectura u){
-		u.show();
 		this.contenido.add(u);
 		notifyAll();
 	}
@@ -60,6 +60,11 @@ public class Buffer {
 		{
 			u.show();
 		}
+	}
+
+	public int size() {
+		
+		return this.contenido.size();
 	}
 
 }

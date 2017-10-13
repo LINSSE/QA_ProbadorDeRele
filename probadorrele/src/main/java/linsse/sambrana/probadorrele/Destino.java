@@ -17,18 +17,15 @@ public abstract class Destino implements Runnable{
 	}
 	
 	
-	public void put(UnidadLectura u){
-		
-
-
-		this.getBuffer().add(u);
+	public void add(UnidadLectura u)
+	{
+			this.getBuffer().add(u);
 	}	
 		
 	public UnidadLectura get(){
 		UnidadLectura u = this.getBuffer().get();
 		if (u != null) 
-		{
-			
+		{			
 			return u;	
 		}
 		else {
@@ -37,6 +34,8 @@ public abstract class Destino implements Runnable{
 		}
 				
 	}
+	
+
 	
 
 

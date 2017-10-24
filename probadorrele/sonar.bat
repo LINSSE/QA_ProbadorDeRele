@@ -1,0 +1,1 @@
+mvn clean install sonar:sonar -Dsonar.organization=linsse  -Dsonar.host.url=https://sonarcloud.io  -Dsonar.login=88911e05daa4237319dec6e79cfef449217c55eb 

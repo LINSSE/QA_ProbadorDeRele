@@ -41,6 +41,7 @@ public class GestorTest {
 		assertTrue(gestor.registrarDestino(destino2));
 		assertTrue(gestor.registrarDestino(destino3));
 		assertTrue(gestor.registrarDestino(destino4));
+		assertTrue(gestor.registrarDestino(destino4));
 		Boolean obtenido = gestor.send(m.read());
 		assertEquals(true, obtenido);
 	}

@@ -1,0 +1,5 @@
+1
+local
+mvn sonar:sonar  -Dsonar.host.url=http://localhost:9000  -Dsonar.login=be34c6e8cb567ce04d072d7131f04b2e5ae9de86
+
+mvn sonar:sonar -Dsonar.organization=linsse  -Dsonar.host.url=https://sonarcloud.io  -Dsonar.login=88911e05daa4237319dec6e79cfef449217c55eb 

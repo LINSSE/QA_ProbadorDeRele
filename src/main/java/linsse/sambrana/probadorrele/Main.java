@@ -19,7 +19,7 @@ public class Main
     	
     	
     }
-	private static void start() {
+	static void start() {
    	 while(Boolean.TRUE)//NOSONAR
         {	
    		 destinos.send(manejador.read());// reemplazar con el scan
@@ -36,7 +36,7 @@ public class Main
         }
 		
 	}
-	private static void setup() {
+	static void setup() {
 		DestinoExcel excel =  new DestinoExcel();
     	Thread hiloExcel = new Thread(excel);
     	hiloExcel.start();

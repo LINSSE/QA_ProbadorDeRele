@@ -35,5 +35,19 @@ public class bufferTest {
 		assertEquals(true, obtenido);
 		
 	}
+	
+	@Test 
+	public void testSizeZero()
+	{
+		assertEquals(0, buffer.size());
+	}
+	
+	public void testSizeOne()
+	{
+		buffer.add(m.read());
+		assertEquals(1, buffer.size());
+	}
+	
+	
 
 }

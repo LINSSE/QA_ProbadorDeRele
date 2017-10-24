@@ -41,17 +41,21 @@ public class ExcelTest {
 	{
 		Buffer buff = d.getBuffer();
 		int size = buff.size();
-		d.put(unidad);
+		d.add(unidad);
 		assertEquals(size+1, buff.size());
 	}
 	@Test
 	public void get(){
-		d.put(unidad);
+		d.add(unidad);
 		assertNotNull(d.get());
 	}
-
+	
+	
+	
 	public void getNull(){
-		assertNull(d.get());
+		
+		
+		
 	}
 
 }

@@ -17,7 +17,8 @@ public class DestinoDrive extends Destino{
 				e.printStackTrace();
 			}
 			 UnidadLectura u = this.get();
-			 System.out.println("Enviado a Google Drive");
+			 this.statusBar.setText("Google Drive: "+this.date()+" - "+this.size()+" en cola");
+			 System.out.println("UPDATE GOOGLE DRIVE");
 //			
 	        }
 	}

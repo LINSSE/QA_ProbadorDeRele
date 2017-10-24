@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <class-diagram version="1.2.1" icons="true" always-add-relationships="false" generalizations="true" realizations="true" 
-  associations="true" dependencies="true" nesting-relationships="true" router="FAN">  
+  associations="false" dependencies="true" nesting-relationships="true" router="FAN">  
   <class id="1" language="java" name="linsse.sambrana.probadorrele.DestinoDrive" project="probadorrele" 
     file="/probadorrele/src/main/java/linsse/sambrana/probadorrele/DestinoDrive.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="117" width="132" x="398" y="598"/>    
+    <position height="-1" width="-1" x="466" y="693"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -14,7 +14,7 @@
   <class id="2" language="java" name="linsse.sambrana.probadorrele.ManejadorEntradas" project="probadorrele" 
     file="/probadorrele/src/main/java/linsse/sambrana/probadorrele/ManejadorEntradas.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="117" width="135" x="567" y="212"/>    
+    <position height="-1" width="-1" x="656" y="270"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -23,7 +23,7 @@
   </class>  
   <class id="3" language="java" name="linsse.sambrana.probadorrele.Buffer" project="probadorrele" 
     file="/probadorrele/src/main/java/linsse/sambrana/probadorrele/Buffer.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="48" y="676"/>    
+    <position height="-1" width="-1" x="57" y="338"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -32,7 +32,7 @@
   </class>  
   <class id="4" language="java" name="linsse.sambrana.probadorrele.Registro" project="probadorrele" 
     file="/probadorrele/src/main/java/linsse/sambrana/probadorrele/Registro.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="46" y="1065"/>    
+    <position height="-1" width="-1" x="54" y="687"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -42,7 +42,7 @@
   <class id="5" language="java" name="linsse.sambrana.probadorrele.UnidadLectura" project="probadorrele" 
     file="/probadorrele/src/main/java/linsse/sambrana/probadorrele/UnidadLectura.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="44" y="867"/>    
+    <position height="-1" width="-1" x="57" y="528"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -52,7 +52,7 @@
   <class id="6" language="java" name="linsse.sambrana.probadorrele.DestinoExcel" project="probadorrele" 
     file="/probadorrele/src/main/java/linsse/sambrana/probadorrele/DestinoExcel.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="117" width="132" x="742" y="598"/>    
+    <position height="-1" width="-1" x="808" y="698"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -71,76 +71,76 @@
   <class id="8" language="java" name="linsse.sambrana.probadorrele.GestorDestinos" project="probadorrele" 
     file="/probadorrele/src/main/java/linsse/sambrana/probadorrele/GestorDestinos.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="445" y="280"/>    
+    <position height="-1" width="-1" x="451" y="239"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="9" language="java" name="linsse.sambrana.probadorrele.Main" project="probadorrele" 
-    file="/probadorrele/src/main/java/linsse/sambrana/probadorrele/Main.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="634" y="77"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="10" language="java" name="linsse.sambrana.probadorrele.DestinoDB" project="probadorrele" 
+  <class id="9" language="java" name="linsse.sambrana.probadorrele.DestinoDB" project="probadorrele" 
     file="/probadorrele/src/main/java/linsse/sambrana/probadorrele/DestinoDB.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="290" y="659"/>    
+    <position height="-1" width="-1" x="290" y="693"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="11" language="java" name="linsse.sambrana.probadorrele.DestinoAnomalia" project="probadorrele" 
+  <class id="10" language="java" name="linsse.sambrana.probadorrele.DestinoAnomalia" project="probadorrele" 
     file="/probadorrele/src/main/java/linsse/sambrana/probadorrele/DestinoAnomalia.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="117" width="132" x="570" y="598"/>    
+    <position height="-1" width="-1" x="637" y="697"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="12" language="java" name="linsse.sambrana.probadorrele.Ventana" project="probadorrele" 
+  <class id="11" language="java" name="linsse.sambrana.probadorrele.Ventana" project="probadorrele" 
     file="/probadorrele/src/main/java/linsse/sambrana/probadorrele/Ventana.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="81" width="132" x="742" y="212"/>    
+    <position height="-1" width="-1" x="864" y="263"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <association id="13">    
-    <end type="SOURCE" refId="9" navigable="false">      
-      <attribute id="14" name="ventana">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </attribute>      
-      <multiplicity id="15" minimum="0" maximum="1">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="12" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <generalization id="16">    
-    <end type="SOURCE" refId="11"/>    
+  <class id="12" language="java" name="linsse.sambrana.probadorrele.Main" project="probadorrele" 
+    file="/probadorrele/src/main/java/linsse/sambrana/probadorrele/Main.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="651" y="19"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <generalization id="13">    
+    <end type="SOURCE" refId="9"/>    
     <end type="TARGET" refId="7"/>  
   </generalization>  
+  <dependency id="14">    
+    <end type="SOURCE" refId="12"/>    
+    <end type="TARGET" refId="11"/>  
+  </dependency>  
+  <dependency id="15">    
+    <end type="SOURCE" refId="12"/>    
+    <end type="TARGET" refId="8"/>  
+  </dependency>  
+  <dependency id="16">    
+    <end type="SOURCE" refId="12"/>    
+    <end type="TARGET" refId="2"/>  
+  </dependency>  
   <association id="17">    
-    <end type="SOURCE" refId="3" navigable="false">      
-      <attribute id="18" name="contenido">        
+    <end type="SOURCE" refId="8" navigable="false">      
+      <attribute id="18" name="destinos">        
         <position height="0" width="0" x="0" y="0"/>      
       </attribute>      
       <multiplicity id="19" minimum="0" maximum="2147483647">        
         <position height="0" width="0" x="0" y="0"/>      
       </multiplicity>    
     </end>    
-    <end type="TARGET" refId="5" navigable="true"/>    
+    <end type="TARGET" refId="7" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
   <generalization id="20">    
@@ -150,10 +150,10 @@
   <association id="21">    
     <end type="SOURCE" refId="7" navigable="false">      
       <attribute id="22" name="contenido">        
-        <position height="0" width="0" x="0" y="0"/>      
+        <position height="0" width="0" x="9" y="-338"/>      
       </attribute>      
       <multiplicity id="23" minimum="0" maximum="1">        
-        <position height="0" width="0" x="0" y="0"/>      
+        <position height="0" width="0" x="9" y="-338"/>      
       </multiplicity>    
     </end>    
     <end type="TARGET" refId="3" navigable="true"/>    
@@ -163,58 +163,34 @@
     <end type="SOURCE" refId="6"/>    
     <end type="TARGET" refId="7"/>  
   </generalization>  
-  <association id="25">    
-    <end type="SOURCE" refId="5" navigable="false">      
-      <attribute id="26" name="contenido">        
-        <position height="0" width="0" x="0" y="0"/>      
+  <generalization id="25">    
+    <end type="SOURCE" refId="10"/>    
+    <end type="TARGET" refId="7"/>  
+  </generalization>  
+  <association id="26">    
+    <end type="SOURCE" refId="3" navigable="false">      
+      <attribute id="27" name="contenido">        
+        <position height="0" width="0" x="13" y="-339"/>      
       </attribute>      
-      <multiplicity id="27" minimum="0" maximum="2147483647">        
-        <position height="0" width="0" x="0" y="0"/>      
+      <multiplicity id="28" minimum="0" maximum="2147483647">        
+        <position height="0" width="0" x="13" y="-339"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="5" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="29">    
+    <end type="SOURCE" refId="5" navigable="false">      
+      <attribute id="30" name="contenido">        
+        <position height="0" width="0" x="8" y="-378"/>      
+      </attribute>      
+      <multiplicity id="31" minimum="0" maximum="2147483647">        
+        <position height="0" width="0" x="8" y="-378"/>      
       </multiplicity>    
     </end>    
     <end type="TARGET" refId="4" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="28">    
-    <end type="SOURCE" refId="9" navigable="false">      
-      <attribute id="29" name="Destinos">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </attribute>      
-      <multiplicity id="30" minimum="0" maximum="1">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="8" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="31">    
-    <end type="SOURCE" refId="8" navigable="false">      
-      <attribute id="32" name="destinos">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </attribute>      
-      <multiplicity id="33" minimum="0" maximum="2147483647">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="7" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="34">    
-    <end type="SOURCE" refId="9" navigable="false">      
-      <attribute id="35" name="manejador">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </attribute>      
-      <multiplicity id="36" minimum="0" maximum="1">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="2" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <generalization id="37">    
-    <end type="SOURCE" refId="10"/>    
-    <end type="TARGET" refId="7"/>  
-  </generalization>  
   <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
     sort-features="false" accessors="true" visibility="true">    
     <attributes public="true" package="true" protected="true" private="true" static="true"/>    

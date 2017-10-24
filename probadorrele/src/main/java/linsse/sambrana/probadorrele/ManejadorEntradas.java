@@ -16,7 +16,7 @@ public class ManejadorEntradas {
 			Registro aux1 = new Registro(this.auxiliar);
 			Registro aux2 = new Registro(this.auxiliar);
 			Registro aux3 = new Registro(this.auxiliar);
-			System.out.println("entrada valida");
+			
 			return  new UnidadLectura(aux1,aux2,aux3);
 		}
 		else

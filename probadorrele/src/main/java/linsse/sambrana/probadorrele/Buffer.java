@@ -34,6 +34,7 @@ public class Buffer {
         notifyAll();
         UnidadLectura val = contenido.get(0);
         contenido.remove(val);
+       
         return val;
 		
 	}

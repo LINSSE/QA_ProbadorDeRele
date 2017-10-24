@@ -27,6 +27,7 @@ import org.jfree.data.xy.XYSeriesCollection;
 public class Ventana extends JFrame {
 	 private static Ventana instancia = null;
 	 private static JPanel panelGraficos;
+	 private static JPanel panelInferior;
 	   private Ventana() { } //constructor privado
 
 	
@@ -46,7 +47,7 @@ public class Ventana extends JFrame {
 	     	instancia.setExtendedState(java.awt.Frame.MAXIMIZED_BOTH);
 	     	
 	     	JPanel panelSuperior = new JPanel();
-	       	JPanel panelInferior = new JPanel(new GridLayout(1,5));
+	       	panelInferior = new JPanel(new GridLayout(1,5));
 	     	JComboBox<String> puerto1 = new JComboBox<String>();
 	     	puerto1.addItem("COM1");
 	     	JComboBox<String> puerto2 = new JComboBox<String>();
@@ -69,26 +70,21 @@ public class Ventana extends JFrame {
 	     	panelSuperior.add(boton2);
 	     	panelGraficos = new JPanel(new GridLayout(3, 5));
 	     	
-	     	instancia.add(panelSuperior,BorderLayout.NORTH);
+//	     	instancia.add(panelSuperior,BorderLayout.NORTH);
 	     	instancia.add(panelGraficos,BorderLayout.CENTER);
 	  
-	     		panelInferior.add(new JLabel("Barra de estado"));
-	     		ImageIcon icon = new ImageIcon("src/main/resources/images/checked.png");
-	     		ImageIcon iconError = new ImageIcon("src/main/resources/images/error.png");
-
-	     		
-
-
-	     		
-	     		
-	     		panelInferior.add(new JLabel("Google Drive", icon, JLabel.CENTER));
-	     		panelInferior.add(new JLabel("Ultima Actualización"));
-	     		panelInferior.add(new JLabel("Servicio GMail", iconError, JLabel.CENTER));
-	     		panelInferior.add(new JLabel("Ultima Actualización"));
-	     		panelInferior.add(new JLabel("Servicio SMS", icon, JLabel.CENTER));
-	     		panelInferior.add(new JLabel("Ultima Actualización"));
-	     		panelInferior.add(new JLabel("Base de Datos", icon, JLabel.CENTER));
-	     		panelInferior.add(new JLabel("Ultima Actualización"));
+//	     		panelInferior.add(new JLabel("Barra de estado"));
+//	     		ImageIcon icon = new ImageIcon("src/main/resources/images/checked.png");
+//	     		ImageIcon iconError = new ImageIcon("src/main/resources/images/error.png");
+//
+//	     		panelInferior.add(new JLabel("Google Drive", icon, JLabel.CENTER));
+//	     		panelInferior.add(new JLabel("Ultima Actualización"));
+//	     		panelInferior.add(new JLabel("Servicio GMail", iconError, JLabel.CENTER));
+//	     		panelInferior.add(new JLabel("Ultima Actualización"));
+//	     		panelInferior.add(new JLabel("Servicio SMS", icon, JLabel.CENTER));
+//	     		panelInferior.add(new JLabel("Ultima Actualización"));
+//	     		panelInferior.add(new JLabel("Base de Datos", icon, JLabel.CENTER));
+//	     		panelInferior.add(new JLabel("Ultima Actualización"));
 	     		
 	     		
 			instancia.add(panelInferior ,BorderLayout.SOUTH);
@@ -104,5 +100,9 @@ public class Ventana extends JFrame {
 	   
 	   public JPanel getPanelGraficos(){
 		   return panelGraficos;
+	   }
+	   
+	   public JPanel getStatusBar(){
+		   return panelInferior;
 	   }
 }

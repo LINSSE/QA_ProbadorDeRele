@@ -19,7 +19,8 @@ public class DestinoExcel extends Destino{
 				e.printStackTrace();
 			}
 			 UnidadLectura u = this.get();
-			 System.out.println("Excel Registro Obtenido ");
+			 this.statusBar.setText("Excel local: "+this.size()+" "+this.date()+" ");
+			 System.out.println("REGISTRANDO EN EXCEL");
 //			
 	        }
 	}

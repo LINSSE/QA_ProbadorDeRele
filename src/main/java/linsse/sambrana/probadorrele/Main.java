@@ -53,9 +53,14 @@ public class Main
     	Thread hiloDrive = new Thread(drive);
     	hiloDrive.start();
     	
+    	DestinoDB DB =  new DestinoDB();
+    	Thread hiloDB = new Thread(DB);
+    	hiloDB.start();
+    	
     	destinos.registrarDestino(excel);
     	destinos.registrarDestino(drive);
     	destinos.registrarDestino(graficos);
     	destinos.registrarDestino(anom);
+    	destinos.registrarDestino(DB);
 	}
 }

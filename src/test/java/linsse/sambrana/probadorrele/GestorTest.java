@@ -40,6 +40,7 @@ public class GestorTest {
 		assertTrue(gestor.registrarDestino(destino1));
 		assertTrue(gestor.registrarDestino(destino2));
 		assertTrue(gestor.registrarDestino(destino3));
+		assertTrue(gestor.registrarDestino(destino4));
 		Boolean obtenido = gestor.send(m.read());
 		assertEquals(true, obtenido);
 	}
@@ -48,6 +49,58 @@ public class GestorTest {
 	public void sendFalse(){
 		Boolean obtenido = gestor.send(m.read());
 		assertEquals(false, obtenido);
+	}
+	@Test
+	public void runTest() throws InterruptedException {
+	  Thread thread = new Thread() {
+	    @Override
+	    public void run() {
+	      destino1.run();
+	    }
+	  };
+
+	  thread.start();
+	  Thread.sleep(1000);//duermo el hilo y pregunto si esta vivo
+	  assertTrue(thread.isAlive());
+	}
+	@Test
+	public void runTest2() throws InterruptedException {
+	  Thread thread = new Thread() {
+	    @Override
+	    public void run() {
+	      destino2.run();
+	    }
+	  };
+
+	  thread.start();
+	  Thread.sleep(1000);//duermo el hilo y pregunto si esta vivo
+	  assertTrue(thread.isAlive());
+	}
+	@Test
+	public void runTest3() throws InterruptedException {
+	  Thread thread = new Thread() {
+	    @Override
+	    public void run() {
+	      destino3.run();
+	    }
+	  };
+
+	  thread.start();
+	  Thread.sleep(1000);//duermo el hilo y pregunto si esta vivo
+	  assertTrue(thread.isAlive());
+	}
+	@Test
+	public void runTest4() throws InterruptedException {
+	  Thread thread = new Thread() {
+	    @Override
+	    public void run() {
+	      destino4.run();
+	    }
+	  };
+
+	  thread.start();
+	  Thread.sleep(1000);//duermo el hilo y pregunto si esta vivo
+	  assertTrue(thread.isAlive());
 	}
 	
 

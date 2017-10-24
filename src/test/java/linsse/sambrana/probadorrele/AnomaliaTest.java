@@ -30,5 +30,6 @@ public class AnomaliaTest {
 	  Thread.sleep(5000);//duermo el hilo y pregunto si esta vivo
 	  assertTrue(thread.isAlive());
 	}
+	
 
 }

@@ -1,12 +1,8 @@
 package linsse.sambrana.probadorrele;
 
 
-import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.Locale;
-import java.util.logging.Logger;
-
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
@@ -51,7 +47,7 @@ public abstract class Destino implements Runnable{
 			return u;	
 		}
 		else {
-			System.out.println(this.getTitulo()+": buffer vacio");
+			System.out.println(this.getTitulo()+": buffer vacio"); //NOSONAR
 			return null;
 		}
 				

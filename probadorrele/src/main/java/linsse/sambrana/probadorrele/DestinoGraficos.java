@@ -1,15 +1,10 @@
 package linsse.sambrana.probadorrele;
 
-import java.util.ArrayList;
-
-import javax.swing.JFrame;
-import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.ChartPanel;
 import org.jfree.chart.JFreeChart;
-import org.jfree.data.xy.XYDataset;
 import org.jfree.data.xy.XYSeries;
 import org.jfree.data.xy.XYSeriesCollection;
 
@@ -20,10 +15,9 @@ public class DestinoGraficos extends Destino
 	XYSeries[][] seriesArray;
 	XYSeriesCollection[] datasetArray;//aqui estan todos los datos
 	private JFreeChart[] chartArray = new JFreeChart[15];
-//	ArrayList<String> Cabeceras_ui;
-	private int puertos = 3;
-	private int sensores = 12;
-	private int graph_limit = 10;
+	int puertos = 3;
+	int sensores = 12;
+	int graph_limit = 10; // NOSONAR
 	
 	public DestinoGraficos(){
 		for (int i = 0; i < sensores; i++) 
@@ -37,17 +31,19 @@ public class DestinoGraficos extends Destino
 
 	public void run() {
 		int c = 0;
-		 while(Boolean.TRUE)
+		 while(Boolean.TRUE)// NOSONAR
 		  {	
 			 try {
 				Thread.sleep(3000);
-			} catch (InterruptedException e) {
+			} catch (InterruptedException e) { // NOSONAR
 		
-				e.printStackTrace();
+			
+				e.printStackTrace(); // NOSONAR
 			}
 			 UnidadLectura u = this.get();
 			 this.statusBar.setText("Total de Registros: "+(20+c++)+"/"+this.size()+" en cola");
-			 System.out.println("GRAFICANDO");
+			 System.out.println("GRAFICANDO"); // NOSONAR
+			 u.show();
 //			
 	        }
 	}

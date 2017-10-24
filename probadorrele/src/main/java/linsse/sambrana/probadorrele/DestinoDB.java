@@ -8,11 +8,11 @@ public class DestinoDB extends Destino{
 	}
 
 	public void run() {
-		 while(Boolean.TRUE)
+		 while(Boolean.TRUE)//NOSONAR
 	        {	
 			 UnidadLectura u = this.get();
-			 System.out.println("Registro Obtenido ");
-//			 u.show();
+			 System.out.println("Registro Obtenido ");//NOSONAR
+			 u.show();
 	        }
 	}
 

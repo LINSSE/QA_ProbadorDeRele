@@ -10,17 +10,18 @@ public class DestinoExcel extends Destino{
 
 
 	public void run() {
-		 while(Boolean.TRUE)
+		 while(Boolean.TRUE)//NOSONAR
 	        {	
 			 try {
 				Thread.sleep(1000);
-			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
+			} catch (InterruptedException e) {//NOSONAR
+			
+				e.printStackTrace();//NOSONAR
 			}
 			 UnidadLectura u = this.get();
 			 this.statusBar.setText("Excel local: "+this.size()+" "+this.date()+" ");
-			 System.out.println("REGISTRANDO EN EXCEL");
+			 System.out.println("REGISTRANDO EN EXCEL");//NOSONAR
+			 u.show();
 //			
 	        }
 	}

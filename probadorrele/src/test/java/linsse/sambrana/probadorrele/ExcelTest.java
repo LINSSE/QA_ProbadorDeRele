@@ -45,17 +45,32 @@ public class ExcelTest {
 		assertEquals(size+1, buff.size());
 	}
 	@Test
-	public void get(){
+	public void getNotNull(){
 		d.add(unidad);
 		assertNotNull(d.get());
 	}
-	
-	
-	
-	public void getNull(){
-		
-		
-		
+	@Test
+	public void get(){
+
+		Destino destino1 = new DestinoExcel();
+		destino1.add(m.read());
+		assertTrue(destino1.get() instanceof UnidadLectura);
 	}
+	@Test
+	public void getZero() throws InterruptedException {
+	  Thread thread = new Thread() {
+	    @Override
+	    public void run() {
+	    	Destino destino1 = new DestinoExcel();
+	    	destino1.get();
+	    }
+	  };
+
+	  thread.start();
+	  Thread.sleep(5000);//duermo el hilo y pregunto si esta vivo
+	  assertTrue(thread.isAlive());
+	}
+	
+
 
 }

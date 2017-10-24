@@ -11,7 +11,7 @@ public class Main
 	 
     public static void main( String[] args )
     {	
-    	System.out.println("INICIO DEL PROGRAMA");
+    	System.out.println("INICIO DEL PROGRAMA");//NOSONAR
     	ventana = Ventana.getInstance();
     	
     	setup();    	
@@ -20,7 +20,7 @@ public class Main
     	
     }
 	private static void start() {
-   	 while(Boolean.TRUE)
+   	 while(Boolean.TRUE)//NOSONAR
         {	
    		 destinos.send(manejador.read());// reemplazar con el scan
             
@@ -30,7 +30,7 @@ public class Main
             } 
             catch (InterruptedException e) 
             {
-                System.err.println("Productor  Error en run -> " + e.getMessage());
+                System.err.println("Productor  Error en run -> " + e.getMessage());//NOSONAR
                Thread.currentThread().interrupt();
             }
         }

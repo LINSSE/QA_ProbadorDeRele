@@ -1,8 +1,6 @@
 package linsse.sambrana.probadorrele;
 
 import java.util.ArrayList;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 /**
  * @author Sambrana Ivan
@@ -19,13 +17,13 @@ public class Buffer {
 		{
 			try{
 				
-				System.out.println("buffer Vacio, en espera por datos");
+				System.out.println("buffer Vacio, en espera por datos"); //NOSONAR
 				wait();
 			}
 			catch(InterruptedException e)
 			{
 				
-				System.err.println("error: Hilo Interrumpido");
+				System.err.println("error: Hilo Interrumpido"); //NOSONAR
 				Thread.currentThread().interrupt();
 
 			}		

@@ -1,8 +1,5 @@
 package linsse.sambrana.probadorrele;
 
-import javax.swing.JLabel;
-import javax.swing.JPanel;
-
 public class DestinoAnomalia extends Destino{
 
 	
@@ -14,17 +11,18 @@ public class DestinoAnomalia extends Destino{
 	}
 
 	public void run() {
-		 while(Boolean.TRUE)
+		 while(Boolean.TRUE)//NOSONAR
 		  {	
 			 try {
 				Thread.sleep(1500);
-			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
+			} catch (InterruptedException e) {//NOSONAR
+		
+				e.printStackTrace();//NOSONAR
 			}
 			 UnidadLectura u = this.get();
 			 this.statusBar.setText("Ultima Anomalia Detectada: "+this.date());
-			 System.out.println("ANALIZANDO ANOMALIAS");
+			 System.out.println("ANALIZANDO ANOMALIAS");//NOSONAR
+			 u.show();
 //			
 	        }
 	}

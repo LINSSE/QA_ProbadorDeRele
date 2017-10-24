@@ -2,8 +2,6 @@ package linsse.sambrana.probadorrele;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 /**
  * @author Sambrana Ivan
@@ -13,7 +11,7 @@ public class Registro {
 
 	private ArrayList<Double> contenido;
 	
-	private String csv;
+	private String csv;//NOSONAR
 	
 
  public Registro(List<Double> d) 
@@ -41,7 +39,7 @@ public void setContenido(List<Double> contenido) {
 
 		public void show() 
 		{
-			System.out.println(this.getContenido().toString());
+			System.out.println(this.getContenido().toString());//NOSONAR
 			
 		}
 	 

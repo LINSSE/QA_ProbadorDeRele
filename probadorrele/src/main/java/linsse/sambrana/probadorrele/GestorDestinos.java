@@ -17,17 +17,19 @@ public class GestorDestinos {
 	/**
 	 * @return the destinos
 	 */
-	private  List<Destino> getDestinos() {
+	public  List<Destino> getDestinos() {
 		return destinos;
 	}
 	
 	public boolean send (UnidadLectura u)
 	{
+		boolean send = false;
 		for (int i = 0; i < this.getDestinos().size(); i++) 
 		{
 			this.getDestinos().get(i).add(u);
+			send = true;
 		}
-		return false;
+		return send;
 	}
 	
 	

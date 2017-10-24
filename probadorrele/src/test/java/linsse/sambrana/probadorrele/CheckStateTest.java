@@ -25,5 +25,10 @@ public class CheckStateTest {
 		Boolean actual = m.checkValues("1,2,5,!,5,6");
 		Assert.assertEquals(false,actual);
 	}
+	
+	@Test
+	public void test_show(){
+		m.read().show();
+	}
 
 }

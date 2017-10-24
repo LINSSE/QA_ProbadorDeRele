@@ -8,17 +8,18 @@ public class DestinoDrive extends Destino{
 	}
 
 	public void run() {
-		 while(Boolean.TRUE)
+		 while(Boolean.TRUE)//NOSONAR
 		  {	
 			 try {
 				Thread.sleep(1500);
-			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
+			} catch (InterruptedException e) {//NOSONAR
+				
+				e.printStackTrace();//NOSONAR
 			}
 			 UnidadLectura u = this.get();
 			 this.statusBar.setText("Google Drive: "+this.date()+" - "+this.size()+" en cola");
-			 System.out.println("UPDATE GOOGLE DRIVE");
+			 System.out.println("UPDATE GOOGLE DRIVE");//NOSONAR
+			 u.show();
 //			
 	        }
 	}

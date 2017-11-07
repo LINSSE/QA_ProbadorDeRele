@@ -1,6 +1,6 @@
 package linsse.sambrana.probadorrele;
 
-
+import javax.swing.JFrame;
 
 public class Main 
 {
@@ -12,10 +12,13 @@ public class Main
     public static void main( String[] args )
     {	
     	System.out.println("INICIO DEL PROGRAMA");//NOSONAR
-    	ventana = Ventana.getInstance();
     	
-    	setup();    	
-    	start();
+    	VentanaConfiguracion configuracion = new VentanaConfiguracion();
+    	
+    	//ventana = Ventana.getInstance();
+    	
+    	//setup();    	
+    	//start();
     	
     	
     }

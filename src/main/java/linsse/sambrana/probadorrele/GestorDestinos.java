@@ -4,10 +4,17 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class GestorDestinos {
+	/**
+	 * Coleccion de destinos
+	 */
 	private static List<Destino> destinos = new ArrayList<Destino>();
 	
 	
 	
+	/**
+	 * @param Destino a añadir a la coleccion de destinos
+	 * @return
+	 */
 	public boolean registrarDestino(Destino d)
 	{
 		destinos.add(d);
@@ -15,12 +22,18 @@ public class GestorDestinos {
 	}
 
 	/**
+	 * obtiene la coleccion de Destinos
 	 * @return the destinos
 	 */
-	public  List<Destino> getDestinos() {
+	List<Destino> getDestinos() {
 		return destinos;
 	}
 	
+	/**
+	 * Envia la unidad de lectura a cada destino
+	 * @param u UnidadLectura a enviar a los destinos
+	 * @return True, si se envio correctamente.
+	 */
 	public boolean send (UnidadLectura u)
 	{
 		boolean send = false;

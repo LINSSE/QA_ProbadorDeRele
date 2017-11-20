@@ -5,7 +5,8 @@ import java.util.List;
 
 /**
  * @author Sambrana Ivan
- *
+ *Clase Registro, maneja un vector con los valores de cada variables
+ *representacion en vector del string csv leido 
  */
 public class Registro {
 
@@ -14,34 +15,40 @@ public class Registro {
 	private String csv;//NOSONAR
 	
 
- public Registro(List<Double> d) 
+ /**
+  * Constructor de clase Registo
+ * @param d vector generado por el manejador de entradas 
+ * string csv convertido a vector Arraylist<Double>
+ */
+public Registro(List<Double> d) 
  { 
 	 this.setContenido((ArrayList<Double>) d);
  }
  
-
-
-
-
 /**
+ * obtener el contenido del registro
  * @return the contenido
  */
 public List<Double> getContenido() {
 	return this.contenido;
 }
 
+
 /**
- * @param contenido the contenido to set
+ * @param contenido
  */
-public void setContenido(List<Double> contenido) {
+private void setContenido(List<Double> contenido) {
 	this.contenido = (ArrayList<Double>) contenido;
 }
 
-		public void show() 
-		{
-			System.out.println(this.getContenido().toString());//NOSONAR
-			
-		}
+/**
+ * Muestra por salida estandar el contenido del registro
+ */
+public void show() 
+{
+	System.out.println(this.getContenido().toString());//NOSONAR
+	
+}
 	 
  
 }

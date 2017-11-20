@@ -10,6 +10,9 @@ public class DestinoAnomalia extends Destino{
 		return "Anomalias";
 	}
 
+	/* (non-Javadoc)
+	 * @see java.lang.Runnable#run()
+	 */
 	public void run() {
 		 while(Boolean.TRUE)//NOSONAR
 		  {	

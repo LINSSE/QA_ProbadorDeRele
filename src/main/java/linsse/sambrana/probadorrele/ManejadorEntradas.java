@@ -9,6 +9,11 @@ public class ManejadorEntradas {
 	private ArrayList<Double> auxiliar;
 	
 	
+	/**
+	 * Lee los string csv, valida y convierte a registros
+	 * conforma la coleccion de registros y retorna la unidadLectura
+	 * @return coleccion de registros de las variables leidas
+	 */
 	public UnidadLectura read()
 	{
 		if (checkValues(testCsv)) 
@@ -49,6 +54,10 @@ public class ManejadorEntradas {
 			return true;
 	}
 
+	/**
+	 * metodo para testing
+	 * @param string
+	 */
 	public void setTest(String string) {
 		this.testCsv = string;
 		

@@ -1,7 +1,9 @@
 package linsse.sambrana.probadorrele;
 
-import javax.swing.JFrame;
-
+/**
+ * @author Sambrana Ivan
+ *
+ */
 public class Main 
 {
 	
@@ -9,36 +11,26 @@ public class Main
 	private static ManejadorEntradas manejador = new ManejadorEntradas();
 	static Ventana ventana;
 	 
+    /**
+     * 
+     */
     public static void main( String[] args )
     {	
     	System.out.println("INICIO DEL PROGRAMA");//NOSONAR
     	
-    	VentanaConfiguracion configuracion = new VentanaConfiguracion();
+    	//VentanaConfiguracion configuracion = new VentanaConfiguracion();
     	
-    	//ventana = Ventana.getInstance();
+    	ventana = Ventana.getInstance();
     	
-    	//setup();    	
-    	//start();
+    	setup();    	
+    	start();
     	
     	
     }
-	static void start() {
-   	 while(Boolean.TRUE)//NOSONAR
-        {	
-   		 destinos.send(manejador.read());// reemplazar con el scan
-            
-            try
-            {
-                Thread.sleep(1000);
-            } 
-            catch (InterruptedException e) 
-            {
-                System.err.println("Productor  Error en run -> " + e.getMessage());//NOSONAR
-               Thread.currentThread().interrupt();
-            }
-        }
-		
-	}
+
+	/**
+	 * Configurar los destinos e iniciar los hilos de ejecucuion
+	 */
 	static void setup() {
 		DestinoExcel excel =  new DestinoExcel();
     	Thread hiloExcel = new Thread(excel);
@@ -56,14 +48,34 @@ public class Main
     	Thread hiloDrive = new Thread(drive);
     	hiloDrive.start();
     	
-    	DestinoDB DB =  new DestinoDB();
-    	Thread hiloDB = new Thread(DB);
+    	DestinoDB db =  new DestinoDB();
+    	Thread hiloDB = new Thread(db);
     	hiloDB.start();
     	
     	destinos.registrarDestino(excel);
     	destinos.registrarDestino(drive);
     	destinos.registrarDestino(graficos);
     	destinos.registrarDestino(anom);
-    	destinos.registrarDestino(DB);
+    	destinos.registrarDestino(db);
 	}
+	/**
+	 * Iniciar la lectura de entradas
+	 */
+	static void start() {
+	   	 while(Boolean.TRUE)//NOSONAR
+	        {	
+	   		 destinos.send(manejador.read());// reemplazar con el scan
+	            
+	            try
+	            {
+	                Thread.sleep(1000);
+	            } 
+	            catch (InterruptedException e) 
+	            {
+	                System.err.println("Productor  Error en run -> " + e.getMessage());//NOSONAR
+	               Thread.currentThread().interrupt();
+	            }
+	        }
+			
+		}
 }

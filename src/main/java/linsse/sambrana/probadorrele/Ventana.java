@@ -11,6 +11,11 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 
+/**
+ * @author Sambrana Ivan
+ * Instancia de la ventana principal 
+ * Diseño Singleton para manejar la unica instancia entre las distintas clases que la tratan
+ */
 @SuppressWarnings("serial")
 public class Ventana extends JFrame { //NOSONAR
 	 private static Ventana instancia = null;
@@ -19,7 +24,11 @@ public class Ventana extends JFrame { //NOSONAR
 	   private Ventana() { } //constructor privado
 
 	
-	   public static Ventana getInstance() {
+	 /**
+	  * obtiene la instancia de la ventana
+	 * @return singleton instance
+	 */
+	public static Ventana getInstance() {
 
 	      if (instancia == null) {
 	    	  
@@ -75,11 +84,19 @@ public class Ventana extends JFrame { //NOSONAR
 	      return instancia;
 	   }
 	   
-	   public JPanel getPanelGraficos(){
+	 /**
+	  * Obtiene acceso al panel de graficos de la ventana principal
+	 * @return Jpanel panel de graficos
+	 */
+	public JPanel getPanelGraficos(){
 		   return panelGraficos;
 	   }
 	   
-	   public JPanel getStatusBar(){
+	 /**
+	  * obtiene acceso a la barra de estado inferior de la ventana principal
+	 * @return Jpanel panel inferior
+	 */
+	public JPanel getStatusBar(){
 		   return panelInferior;
 	   }
 }

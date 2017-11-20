@@ -8,9 +8,13 @@ import java.util.ArrayList;
  */
 public class Buffer {
 	
-	ArrayList<UnidadLectura> contenido = new ArrayList<UnidadLectura>();
+	private ArrayList<UnidadLectura> contenido = new ArrayList<UnidadLectura>();
 
 	
+	/**
+	 * obtiene el primer registro del buffer FIFO
+	 * @return ultimo elemento del buffer
+	 */
 	public synchronized UnidadLectura get()
 	{
 		while(contenido.isEmpty())
@@ -38,10 +42,18 @@ public class Buffer {
 	}
 	
 		
+	/**
+	 * metodo que permite verificar si el buffer se encuentra vacio
+	 * @return TRUE si no hay elementos FALSE si los hay
+	 */
 	public Boolean isEmpty(){
 		return this.contenido.isEmpty();	
 	}
 	
+	/**
+	 * metodo que permite verificar si el buffer contiene elementos
+	 * @return TRUE si hay Elementos FALSE si no los hay
+	 */
 	public Boolean hasElements(){
 		return !this.isEmpty();
 	}
@@ -61,6 +73,10 @@ public class Buffer {
 		}
 	}
 
+	/**
+	 * obtener cantidad de registros en el buffer
+	 * @return int
+	 */
 	public int size() {
 		
 		return this.contenido.size();

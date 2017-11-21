@@ -7,7 +7,7 @@ public class ManejadorEntradas {
 	
 	private String testCsv = "1,2,3,4,5,6,7,8,9,10,11,12";
 	private ArrayList<Double> auxiliar;
-	
+	private Double valorPerdido = (double) 9999;
 	
 	/**
 	 * Lee los string csv, valida y convierte a registros
@@ -34,19 +34,37 @@ public class ManejadorEntradas {
 	}
 	 
 	 /**
+	  * Valida el string de entrada y convierte a coleccion de numeros
+	  * Verificaciones: 
+	  * 	formato csv
+	  * 	Valores Numericos
+	  * 	Valores Dentro del Rango determinado 0-1024
+	  * 	Si el valor se encuetra fuera de rango se aplica el valor perdido
 	 * @param csv String de valores numericos en formato "Comma Separated Values" 
 	 * @return true si todos los valores del string son validos
 	 * @throws NumberFormatException
 	 */
 	public Boolean checkValues(String csv)
 	 {
-		 this.auxiliar = new ArrayList<Double>();
-		 ArrayList<String> aList= new ArrayList<String>(Arrays.asList(csv.split(",")));
+		 this.auxiliar = new ArrayList<Double>();//registro auxiliar
+		 ArrayList<String> aList= new ArrayList<String>(Arrays.asList(csv.split(",")));//Parseo el string csv en un array de elementos tipo string
 			for (String string : aList) 
 			{
 				try {
-					this.auxiliar.add(Double.valueOf(string));
-				} catch (NumberFormatException e) {
+					Double aux = Double.valueOf(string);// convierte el string a numero si es posibles
+					if(0<aux && aux<1024)// dentro de rango analogico 0-1024 
+					{
+						this.auxiliar.add(aux);//añade el numero al registro temporal auxiliar
+					}
+					else
+					{
+						this.auxiliar.add(this.valorPerdido);//añade valor perdido al registro temporal
+					}
+				
+					
+				} 
+				catch (NumberFormatException e)//capturo excepcion valor no numerico 
+				{
 				
 					return false;
 				}

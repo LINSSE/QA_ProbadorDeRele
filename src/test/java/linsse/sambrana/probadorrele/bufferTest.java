@@ -22,7 +22,7 @@ public class bufferTest {
 		
 	}
 	@Test
-	public void testempty() {
+	public void testEmpty() {
 		buffer.add(m.read());
 		Boolean obtenido = buffer.isEmpty();
 		assertEquals(false, obtenido);

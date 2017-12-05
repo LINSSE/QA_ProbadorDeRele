@@ -13,6 +13,9 @@ public class CheckStateTest {
 		
 	}
 
+	/**
+	 * Test que validad una cadena correcta
+	 */
 	@Test
 	public void test_valido() {
 		
@@ -20,9 +23,22 @@ public class CheckStateTest {
 		Assert.assertEquals(true,actual);
 		
 	}
+	/**
+	 * Test que verifica una cadena incorrecta
+	 * Simbolo no alfanumerico
+	 */
 	@Test
 	public void test_invalido(){
 		Boolean actual = m.checkValues("1,2,5,!,5,6");
+		Assert.assertEquals(false,actual);
+	}
+	/**
+	 * Test que verifica una cadena incorrecta
+	 * Simbolo Valor Fuera de Rango 0-1024
+	 */
+	@Test
+	public void test_invalidoOver(){
+		Boolean actual = m.checkValues("1,2,5,7000,5,6");
 		Assert.assertEquals(false,actual);
 	}
 	

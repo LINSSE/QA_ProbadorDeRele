@@ -61,7 +61,7 @@ public class GestorTest {
 	  };
 
 	  thread.start();
-	  Thread.sleep(1000);//duermo el hilo y pregunto si esta vivo
+	  Thread.sleep(1000);////NOSONARduermo el hilo y pregunto si esta vivo
 	  assertTrue(thread.isAlive());
 	}
 	@Test
@@ -74,7 +74,7 @@ public class GestorTest {
 	  };
 
 	  thread.start();
-	  Thread.sleep(1000);//duermo el hilo y pregunto si esta vivo
+	  Thread.sleep(1000);////NOSONARduermo el hilo y pregunto si esta vivo
 	  assertTrue(thread.isAlive());
 	}
 	@Test
@@ -87,7 +87,7 @@ public class GestorTest {
 	  };
 
 	  thread.start();
-	  Thread.sleep(1000);//duermo el hilo y pregunto si esta vivo
+	  Thread.sleep(1000);////NOSONARduermo el hilo y pregunto si esta vivo
 	  assertTrue(thread.isAlive());
 	}
 	@Test
@@ -100,7 +100,7 @@ public class GestorTest {
 	  };
 
 	  thread.start();
-	  Thread.sleep(1000);//duermo el hilo y pregunto si esta vivo
+	  Thread.sleep(1000);//NOSONARduermo el hilo y pregunto si esta vivo
 	  assertTrue(thread.isAlive());
 	}
 	

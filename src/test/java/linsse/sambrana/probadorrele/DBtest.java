@@ -27,7 +27,7 @@ public class DBtest {
 	  };
 
 	  thread.start();
-	  Thread.sleep(5000);//duermo el hilo y pregunto si esta vivo
+	  Thread.sleep(5000);//NOSONAR duermo el hilo y pregunto si esta vivo
 	  assertTrue(thread.isAlive());
 	}
 

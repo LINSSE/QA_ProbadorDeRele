@@ -33,7 +33,12 @@ public class Main
     	if (SerialPort.TestPorts()) 
     	{
     		SerialPort.Read();
+    		System.out.println("Abrir Puertos");
 		}
+    	else
+    	{
+    		System.err.println("Error al Abrir Puertos");
+    	}
     	
     	
     }

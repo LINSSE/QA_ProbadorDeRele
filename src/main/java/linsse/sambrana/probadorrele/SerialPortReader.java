@@ -4,6 +4,7 @@ import java.util.Scanner;
 public class SerialPortReader {
 	private SerialPort[] chosenPort = new SerialPort[3];
 	private Scanner[] Scanner = new Scanner[3];
+	private boolean stop = false;
 	
 	
 	public SerialPortReader(String[] ports)
@@ -28,7 +29,10 @@ public class SerialPortReader {
 			if(!serialPort.openPort())
 			{
 				ret = false;
-				System.err.println("No se puede Abrir el Puerto "+serialPort.getDescriptivePortName());
+				System.err.println("No se puede Abrir el Puerto "+serialPort.getSystemPortName());
+			}
+			else{
+				System.out.println("Abrir el Puerto "+serialPort.getDescriptivePortName());
 			}
 		}
 		
@@ -38,7 +42,7 @@ public class SerialPortReader {
 	
 	public void Read()
 	{
-		
+			
 			// create a new thread that listens for incoming text and populates the graph
 			Thread thread = new Thread(){
 				@Override public void run() {
@@ -49,16 +53,22 @@ public class SerialPortReader {
 					
 					
 					//Verifica que ambos puertos tengan informacion para leer
-					while(Scanner[0].hasNextLine()
-						&& Scanner[1].hasNextLine()
-						&& Scanner[2].hasNextLine()) 
+					while(Scanner[0].hasNextLine() ||
+							Scanner[1].hasNextLine() ||
+							Scanner[2].hasNextLine()) 
 					{
+						
 						try {
 							
-							for (int i = 0; i < Scanner.length; i++) {
-								String line = Scanner[i].nextLine();
-								System.out.println(line);//NOSONAR
+							String[] nx = nextLine();
+							System.out.println("--------------------------");
+							for (int j = 0; j < Scanner.length; j++) {
+								System.out.println(nx[j]);
+								
 							}
+							
+								
+							
 							
 						} catch(Exception e) 
 						{
@@ -69,11 +79,29 @@ public class SerialPortReader {
 					for (int i = 0; i < Scanner.length; i++) {
 						Scanner[i].close();
 					}
-				}
-			};
+				
+			}};
 			thread.start();
 		
 	}
+	
+	private String[] nextLine(){
+		String[] ret = new String[3];
+		for (int i = 0; i < Scanner.length; i++) {
+			if (Scanner[i].hasNextLine()) 
+			{
+				ret[i] = Scanner[i].nextLine();
+			}
+			else
+			{
+				ret[i] = "no line";
+			}
+		}
+		
+		return ret;
+	}
+	
+	
 	
 
 }

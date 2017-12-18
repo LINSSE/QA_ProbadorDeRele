@@ -40,6 +40,7 @@ public class CheckStateTest {
 	public void test_invalidoOver(){
 		Boolean actual = m.checkValues("1,2,5,7000,5,6");
 		Assert.assertEquals(false,actual);
+		
 	}
 	
 	@Test

@@ -19,17 +19,14 @@ public class Buffer {
 	{
 		while(contenido.isEmpty())
 		{
-			try{
-				
+			try{				
 				System.out.println("buffer Vacio, en espera por datos"); //NOSONAR
 				wait();
 			}
 			catch(InterruptedException e)
 			{
-				
 				System.err.println("error: Hilo Interrumpido"); //NOSONAR
 				Thread.currentThread().interrupt();
-
 			}		
 		}
 		

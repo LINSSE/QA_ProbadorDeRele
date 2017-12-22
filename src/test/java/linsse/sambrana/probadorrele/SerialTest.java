@@ -39,5 +39,18 @@ public class SerialTest {
 	public void testPorts(){
 		assertTrue(serialPort.TestPorts());
 	}
-	
+	@Test (expected = AssertionError.class)
+	public void testRead() throws InterruptedException
+	{
+		 Thread thread = new Thread() {
+			    @Override
+			    public void run() {
+			    	serialPort.Read();
+			    }
+			  };
+
+			  thread.start();
+			  Thread.sleep(5000);//NOSONARduermo el hilo y pregunto si esta vivo
+			  assertTrue(thread.isAlive());
+	}
 }

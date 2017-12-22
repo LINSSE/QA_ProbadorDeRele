@@ -4,7 +4,7 @@ import java.util.Scanner;
 public class SerialPortReader {
 	private SerialPort[] chosenPort = new SerialPort[3];
 	private Scanner[] Scanner = new Scanner[3];
-	private boolean stop = false;
+	
 	
 	
 	public SerialPortReader(String[] ports)
@@ -29,10 +29,10 @@ public class SerialPortReader {
 			if(!serialPort.openPort())
 			{
 				ret = false;
-				System.err.println("No se puede Abrir el Puerto "+serialPort.getSystemPortName());
+				System.err.println("No se puede Abrir el Puerto "+serialPort.getSystemPortName());//NOSONAR
 			}
 			else{
-				System.out.println("Abrir el Puerto "+serialPort.getDescriptivePortName());
+				System.out.println("Abrir el Puerto "+serialPort.getDescriptivePortName());//NOSONAR
 			}
 		}
 		
@@ -61,16 +61,14 @@ public class SerialPortReader {
 						try {
 							
 							String[] nx = nextLine();
-							System.out.println("--------------------------");
+							System.out.println("--------------------------");//NOSONAR
 							for (int j = 0; j < Scanner.length; j++) {
-								System.out.println(nx[j]);
+								System.out.println(nx[j]);//NOSONAR
 								
 							}
+													
 							
-								
-							
-							
-						} catch(Exception e) 
+						} catch(Exception e) //NOSONAR
 						{
 							System.err.println(e.getMessage());//NOSONAR
 						}
@@ -85,7 +83,7 @@ public class SerialPortReader {
 		
 	}
 	
-	private String[] nextLine(){
+	public String[] nextLine(){
 		String[] ret = new String[3];
 		for (int i = 0; i < Scanner.length; i++) {
 			if (Scanner[i].hasNextLine()) 

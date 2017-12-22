@@ -35,5 +35,9 @@ public class SerialTest {
 		assertEquals(expected[1],retorno[1]);
 		assertEquals(expected[2],retorno[2]);
 	}
+	@Test
+	public void testPorts(){
+		assertTrue(serialPort.TestPorts());
+	}
 	
 }

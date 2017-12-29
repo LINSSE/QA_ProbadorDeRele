@@ -4,7 +4,7 @@ package linsse.sambrana.probadorrele;
  * @author Sambrana Ivan
  *
  */
-public class Main 
+public class Main //NOSONAR
 {
 	
 	private static GestorDestinos destinos = new GestorDestinos();

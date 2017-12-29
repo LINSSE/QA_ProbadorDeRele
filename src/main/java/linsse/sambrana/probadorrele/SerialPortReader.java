@@ -3,7 +3,7 @@ import com.fazecast.jSerialComm.SerialPort;
 import java.util.Scanner;
 public class SerialPortReader {
 	private SerialPort[] chosenPort = new SerialPort[3];
-	private Scanner[] Scanner = new Scanner[3];
+	private Scanner[] scanner = new Scanner[3];
 	
 	
 	
@@ -21,7 +21,7 @@ public class SerialPortReader {
 	 * @return True si los puertos se pudieron abrir correctamente
 	 * False en otro caso
 	 */
-	public boolean TestPorts()
+	public boolean testPorts()
 	{
 		boolean ret = true;
 		for (SerialPort serialPort : chosenPort) {
@@ -47,22 +47,22 @@ public class SerialPortReader {
 			Thread thread = new Thread(){
 				@Override public void run() {
 					///asocio un scanner a cada input
-					for (int i = 0; i < Scanner.length; i++) {
-						Scanner[i] = new Scanner(chosenPort[i].getInputStream());
+					for (int i = 0; i < scanner.length; i++) {
+						scanner[i] = new Scanner(chosenPort[i].getInputStream());
 					}
 					
 					
 					//Verifica que ambos puertos tengan informacion para leer
-					while(Scanner[0].hasNextLine() ||
-							Scanner[1].hasNextLine() ||
-							Scanner[2].hasNextLine()) 
+					while(scanner[0].hasNextLine() ||
+							scanner[1].hasNextLine() ||
+							scanner[2].hasNextLine()) 
 					{
 						
 						try {
 							
 							String[] nx = nextLine();
 							System.out.println("--------------------------");//NOSONAR
-							for (int j = 0; j < Scanner.length; j++) {
+							for (int j = 0; j < scanner.length; j++) {
 								System.out.println(nx[j]);//NOSONAR
 								
 							}
@@ -74,8 +74,8 @@ public class SerialPortReader {
 						}
 					}
 					//end while
-					for (int i = 0; i < Scanner.length; i++) {
-						Scanner[i].close();
+					for (int i = 0; i < scanner.length; i++) {
+						scanner[i].close();
 					}
 				
 			}};
@@ -85,10 +85,10 @@ public class SerialPortReader {
 	
 	public String[] nextLine(){
 		String[] ret = new String[3];
-		for (int i = 0; i < Scanner.length; i++) {
-			if (Scanner[i].hasNextLine()) 
+		for (int i = 0; i < scanner.length; i++) {
+			if (scanner[i].hasNextLine()) 
 			{
-				ret[i] = Scanner[i].nextLine();
+				ret[i] = scanner[i].nextLine();
 			}
 			else
 			{

@@ -37,7 +37,7 @@ public class SerialTest {
 	}
 	@Test
 	public void testPorts(){
-		assertTrue(serialPort.TestPorts());
+		assertTrue(serialPort.testPorts());
 	}
 	@Test (expected = AssertionError.class)
 	public void testRead() throws InterruptedException

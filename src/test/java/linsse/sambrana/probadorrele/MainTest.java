@@ -27,7 +27,7 @@ public class MainTest {
 	  };
 
 	  thread.start();
-	  Thread.sleep(1000);//duermo el hilo y pregunto si esta vivo
+	  Thread.sleep(1000);// NOSONAR duermo el hilo y pregunto si esta vivo
 	  assertTrue(thread.isAlive());
 
 		}
@@ -44,7 +44,7 @@ public class MainTest {
 	  };
 
 	  thread.start();
-	  Thread.sleep(1000);//duermo el hilo y pregunto si esta vivo
+	  Thread.sleep(1000);// NOSONAR duermo el hilo y pregunto si esta vivo
 	  assertTrue(thread.isAlive());
 
 		}

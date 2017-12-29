@@ -9,11 +9,13 @@ import javax.swing.JPanel;
 
 public class VentanaConfiguracion extends JFrame{
 	private JPanel puertos = new JPanel();
+	@SuppressWarnings("unused")
 	private JPanel gmail = new JPanel();
+	@SuppressWarnings("unused")
 	private JPanel servidor = new JPanel();
 	
 	public VentanaConfiguracion() {
-		// TODO Auto-generated constructor stub
+
 		this.setSize(640, 480);
 		
 		this.setTitle("Configuracion Inicial");

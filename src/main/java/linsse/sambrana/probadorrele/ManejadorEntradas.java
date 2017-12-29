@@ -26,7 +26,7 @@ public class ManejadorEntradas {
 		}
 		else
 		{
-			System.out.println("entrada invalida");//NOSONAR
+			System.out.println("entrada invalida"); //NOSONAR
 			return null;	
 		}
 		

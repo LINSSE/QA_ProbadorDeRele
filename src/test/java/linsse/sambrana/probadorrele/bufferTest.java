@@ -48,6 +48,13 @@ public class bufferTest {
 		assertEquals(1, buffer.size());
 	}
 	
+	@Test
+	public void testShow(){
+		buffer.add(m.read());
+		buffer.show();
+		
+	}
+	
 	
 
 }

@@ -40,7 +40,7 @@ public class SerialPortReader {
 	
 	}
 	
-	public void Read()
+	public void read()
 	{
 			
 			// create a new thread that listens for incoming text and populates the graph

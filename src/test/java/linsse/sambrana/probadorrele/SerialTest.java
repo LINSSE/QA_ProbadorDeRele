@@ -45,7 +45,7 @@ public class SerialTest {
 		 Thread thread = new Thread() {
 			    @Override
 			    public void run() {
-			    	serialPort.Read();
+			    	serialPort.read();
 			    }
 			  };
 

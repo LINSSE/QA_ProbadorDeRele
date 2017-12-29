@@ -18,27 +18,8 @@ public class Main
     {	
     	System.out.println("INICIO DEL PROGRAMA");//NOSONAR
     	
-    	//VentanaConfiguracion configuracion = new VentanaConfiguracion();
     	
-    	//ventana = Ventana.getInstance();
     	
-    	//setup();    	
-    	//start();
-    	String[] Puertos = new String[3];
-    	Puertos[0] = "COM2";
-    	Puertos[1] = "COM4";
-    	Puertos[2] = "COM6";
-    	
-    	SerialPortReader SerialPort = new SerialPortReader(Puertos);
-    	if (SerialPort.TestPorts()) 
-    	{
-    		SerialPort.Read();
-    		System.out.println("Abrir Puertos");
-		}
-    	else
-    	{
-    		System.err.println("Error al Abrir Puertos");
-    	}
     	
     	
     }
